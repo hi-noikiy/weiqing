@@ -1,0 +1,23 @@
+2016-12-02 13:45:14 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1480657515</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[乐兔3]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-12-02 13:45:15 params :
+------------
+Array:
+message : Array ;
+module : htxy_sweb ;
+rule : 176 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-12-02 13:45:15 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+

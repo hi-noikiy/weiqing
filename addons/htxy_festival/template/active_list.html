@@ -1,0 +1,38 @@
+{template 'common/header'}
+<a href="{php echo url('platform/reply/post',array('m'=>'htxy_festival'));}" class="btn btn-primary span3">添加活动</a>
+<div class="panel panel-default">
+  <div class="panel-heading">活动管理</div>
+
+  <!-- Table -->
+  <table class="table">
+    <th>编号</th>
+    <th>店名</th>
+    <th>活动名称</th>
+    <th>添加时间</th>
+    <th>操作</th>
+      {loop $list $results}
+    <tr>
+        <td class="with-checkbox">
+          {$results['id']}
+        </td>
+        <td>{$results['shop_title']}</td>
+        <td>{$results['active_name']}</td>
+        
+        <td>{$results['create_time']}</td>
+        <td>
+          <a class="btn btn-default" href="{php echo url('platform/reply/post',array('m'=>'htxy_festival','rid'=>$results['rid'],'id'=>$results['id']));}" title="编辑"><i class="fa fa-edit"></i>&nbsp;</a>
+          
+          <a class="btn btn-default" href="{php echo $this->createWebUrl('delete_active',array('id'=>$results['id'],'rid'=>$results['rid']))}" onclick="return confirm('确定删除?')" title="删除" ><i class="fa fa-remove"></i></a>
+         
+          <a class="btn btn-default" href="{php echo $this->createWebUrl('register_list',array('id'=>$results['id'],'uniacid'=>$results['uniacid']))}"  title="报名列表" ><i class="glyphicon glyphicon-list-alt"></i></a>
+          
+        </td>
+    </tr>
+
+    {/loop}
+  </table>
+  {$pager}
+
+</div>
+
+{template 'common/footer'}

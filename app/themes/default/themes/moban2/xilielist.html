@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>系列列表</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<script src = 'resource/js/rem.js'></script>
+    <script src = "resource/js/jquery-3.1.1.js"></script>
+    <script src ="resource/js/lazyload.js"></script>
+	<style>
+        .container{
+            padding: 15px;
+        }
+        .opstion{
+            font-size: 0.28rem;
+            color: #666;
+            padding: 20px 0;
+        }
+        .opstion a{
+            color: #666;
+        }
+        .opstion span{
+            color: red;
+        }
+        .works-list{
+            /*background-color: #ccc;*/
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .works .left,.works .right{
+            width: 49%;
+        }
+        .works-list img{
+            width: 100%;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+        .big{
+            display: none;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .big .close{
+            font-size: 0.5rem;
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+        }
+        .big .img{
+            width: 80%;
+            margin: 1rem auto;
+
+        }
+        .big .img img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="wrap">
+            <div class="opstion">
+                
+                <a class="home" title="首页" href="index.html" target="_self">首页</a> - <a href="yangpian.html" title="" target="_self">样片欣赏</a> - <span>某某系列</span>
+            </div>
+
+            <div class="works">
+                <div class="works-list">
+                    <div class="left">
+                        <img src="resource/images/17sym0005rm.jpg" alt="" class="lazy">
+                        <img src="resource/images/bg_index.jpg" alt="" class="lazy">
+                        <img src="resource/images/mhrm-cpmh-25772.jpg" alt="" class="lazy">
+                        <img src="resource/images/bji02300117.jpg" alt="" class="lazy">
+                        
+                        
+                    </div>
+                    <div class="right">
+                        <img src="resource/images/mhrm-cpmh-46241b10z.jpg" alt="" class="lazy">
+                        
+                        <img src="resource/images/bji04730215.jpg" alt="" class="lazy">
+                        <img src="resource/images/mhrm-cpmh-46212b07z.jpg" alt="" class="lazy">
+                        <img src="resource/images/ph1747-7411.jpg" alt="" class="lazy">
+                    	
+                    </div>
+            	</div>
+        	</div>
+		</div>
+	</div>
+    <div class="big">
+        <div class="close">X</div>
+        <div class="img">
+            <img src="resource/images/bg_index.jpg" alt="">
+        </div>
+    </div>
+</body>
+<script>
+        $("img.lazy").lazyload();
+
+        $(".works img").click(function() {
+          var src = $(this).attr('src');
+           $(".big").css({"display":"block"});
+           $(".big img").attr('src', src);
+        });
+        $(".close").click(function() {
+            $(".big").css({"display":"none"})
+        });
+    </script>
+</html>

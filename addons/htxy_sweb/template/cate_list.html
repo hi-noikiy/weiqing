@@ -1,0 +1,50 @@
+{template 'common/header'}
+<a href="{php echo $this->createWebUrl('add_cate');}" class="btn btn-primary span3" id="cate" >添加栏目</a>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">栏目管理</div>
+
+  <!-- Table -->
+  <table class="table">
+    <th>编号</th>
+    <th>栏目名称</th>
+    <!-- <th>状态</th> -->
+    <th>添加时间</th>
+    <th>操作</th>
+    	{loop $list $results}
+
+    <tr>
+		            <td class="with-checkbox">
+                        <input type="checkbox" name="ids" value="{$results['id']}">
+		            	{$results['id']}
+		            </td>
+		            <td>{$results['cate_name']}</td>
+		            <!-- <td>{$results['is_show']}</td> -->
+		            <td>{$results['create_time']}</td>
+		            <td>
+		            	<a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" href="{php echo $this->createWebUrl('add_cate',array('id'=>$results['id']))}"title="编辑"><i class="fa fa-edit"></i>&nbsp;</a>
+		            	<a class="btn btn-default" onclick="confirm('您确定要删除吗?', '{php echo $this->createWebUrl('delete_cate',array('id'=>$results['id']))}');"  title="删除"><i class="fa fa-remove"></i></a>
+		            	{if $results['is_show']==1}
+				          <a class="btn btn-default" href="{php echo $this->createWebUrl('edit_status',array('id'=>$results['id'],'is_show'=>$results['is_show'],'table'=>'cate','url'=>'sweb_cate'))}" onclick="return confirm('确定改变显示状态?')" title="显示" ><i class="glyphicon glyphicon-eye-open"></i></a>
+				          {else}
+				          <a class="btn btn-default" href="{php echo $this->createWebUrl('edit_status',array('id'=>$results['id'],'is_show'=>$results['is_show'],'table'=>'cate','url'=>'sweb_cate'))}" onclick="return confirm('确定改变显示状态?')" title="不显示" ><i class="glyphicon glyphicon-eye-close"></i></a>
+				        {/if}
+		            </td>
+    </tr>
+
+		{/loop}
+	<!-- <tr>
+		<td>
+			<input type="checkbox" class="check_all" />
+   
+			<input type="button" class="btn btn-primary" name="deleteall" value="删除选择的" /> 
+		</td>
+
+	</tr> -->
+	
+  </table>
+  {$pager}
+</div>
+{template 'common/footer'}
+
+

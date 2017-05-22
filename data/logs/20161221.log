@@ -1,0 +1,46 @@
+2016-12-21 10:26:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1482287167</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[过节啦]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-12-21 10:26:06 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 31 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-12-21 10:26:06 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2016-12-21 10:28:03 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1482287284</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[过节啦]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-12-21 10:28:03 params :
+------------
+Array:
+message : Array ;
+module : htxy_festival ;
+rule : 195 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-12-21 10:28:03 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+

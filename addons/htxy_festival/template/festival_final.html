@@ -1,0 +1,120 @@
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        活动添加
+    </div>
+  
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">店铺名称</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="shop_title" id="inputEmail3" placeholder="请填写店铺名称" value="{$sites['shop_title']}">
+    </div>
+  </div>
+  <!-- 店联系电话 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">店联系电话</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="shop_phone" id="inputEmail3" placeholder="请输入电话" value="{$sites['shop_phone']}">
+    </div>
+  </div>
+   <!-- 店联系人 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">店联系人</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="shop_staff" id="inputEmail3" placeholder="请输入联系人姓名" value="{$sites['shop_staff']}">
+    </div>
+  </div>
+  <!-- 顶部背景图片 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">顶部背景</label>
+    <div class="col-sm-10">
+        {php echo tpl_form_field_image('top_back',$sites['top_back']);}
+      
+    </div>
+  </div>
+<!-- 活动名称 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">活动内容</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" name="active_name" id="inputEmail3" placeholder="请输入活动名" value="{$sites['active_name']}">
+    </div>
+  </div>
+   <!-- 活动内容 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">活动内容</label>
+    <div class="col-sm-10">
+        {php echo tpl_form_field_multi_image('active_img',$sites['active_img']);}
+    </div>
+  </div>
+   
+  <!-- 点亮的图标 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">点亮的图标</label>
+    <div class="col-sm-10">
+        {php echo tpl_form_field_image('light_pic',$sites['light_pic']);}
+    </div>
+  </div>
+   <!-- 点亮图标的个数 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">点亮图标的个数</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" name="light_num" id="inputEmail3" placeholder="点亮图标的个数" value="{$sites['light_num']}">
+    </div>
+  </div>
+   
+  
+   <!-- 活动有效期 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">活动有效期</label>
+
+    <div class="col-sm-10">
+      {php echo tpl_form_field_daterange('range', array('start'=>$sites['active_start'],'end'=>$sites['active_end']), true);}
+    </div>
+  </div> 
+
+   <!-- 活动地图-->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">店铺位置</label>
+    <div class="col-sm-10">
+        {php echo tpl_form_field_coordinate('map',array('lng'=>$sites['lng'],'lat'=>$sites['lat']))}
+    </div>
+  </div>
+  <!-- 背景音乐-->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">背景音乐</label>
+    <div class="col-sm-10">
+        {php echo tpl_form_field_audio('back_music',$sites['back_music']);}
+    </div>
+  </div>
+</div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        分享设置
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">分享标题</label>
+            <div class="col-sm-9 col-xs-12">
+                <input type="text" id="share_title" class="form-control" placeholder="标题不超过30个字" name="share_title" value="{$sites['share_title']}">
+            </div>
+        </div>
+        <!-- 分享的图片 -->
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">分享的图片</label>
+            <div class="col-sm-9 col-xs-12">
+                {php echo tpl_form_field_image('share_pic',$sites['share_pic']);}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">分享描述</label>
+            <div class="col-sm-9 col-xs-12">
+                <textarea style="height:60px;" id='share_desc' name="share_desc" class="form-control" cols="60" placeholder="请限制在50字以内">{$sites['share_desc']}</textarea>
+            </div>
+        </div>
+       <input type="hidden" value="{$sites['id']}" name="id">
+    </div>
+</div>
+
+
+
+

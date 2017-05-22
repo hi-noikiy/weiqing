@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://www.we7.cc" versionCode="0.6">
+	<application setting="true">
+		<name><![CDATA[微企]]></name>
+		<identifie><![CDATA[htxy_sweb]]></identifie>
+		<version><![CDATA[1.0]]></version>
+		<type><![CDATA[activity]]></type>
+		<ability><![CDATA[微企]]></ability>
+		<description><![CDATA[微企业网站]]></description>
+		<author><![CDATA[红途小莜]]></author>
+		<url><![CDATA[http://bbs.we7.cc/]]></url>
+	</application>
+	<platform>
+		<subscribes>
+			<message type="text" />
+			<message type="image" />
+			<message type="voice" />
+			<message type="video" />
+			<message type="shortvideo" />
+			<message type="location" />
+			<message type="link" />
+			<message type="subscribe" />
+			<message type="unsubscribe" />
+			<message type="qr" />
+			<message type="trace" />
+			<message type="click" />
+			<message type="view" />
+			<message type="merchant_order" />
+		</subscribes>
+		<handles>
+			<message type="image" />
+			<message type="voice" />
+			<message type="video" />
+			<message type="shortvideo" />
+			<message type="location" />
+			<message type="link" />
+			<message type="subscribe" />
+			<message type="qr" />
+			<message type="trace" />
+			<message type="click" />
+			<message type="merchant_order" />
+			<message type="text" />
+		</handles>
+		<rule embed="true" />
+		<card embed="false" />
+	</platform>
+	<bindings>
+		<cover>
+			<!-- <entry title="微企入口" do="index" state="data" direct="false" /> -->
+		</cover>
+		 <menu>
+		<entry title="站名管理" do="sweb_man" state="" direct="false" />
+		<entry title="栏目管理" do="sweb_cate" state="" direct="false" />
+		<entry title="内容管理" do="sweb_article_list" state="" direct="false" />
+		<entry title="轮播管理" do="sweb_carousel" state="" direct="false" />
+		<entry title="订单管理" do="sweb_order" state="" direct="false" />
+		<entry title="留言板" do="sweb_mess" state="" direct="false" />
+		</menu>
+	</bindings>
+	<permissions>
+	</permissions>
+	<install><![CDATA[]]></install>
+	<uninstall><![CDATA[]]></uninstall>
+	<upgrade><![CDATA[]]></upgrade>
+</manifest>

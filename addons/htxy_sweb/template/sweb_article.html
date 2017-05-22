@@ -1,0 +1,194 @@
+{template 'common/header'}
+
+ <div class="panel panel-default">
+  <form action="{php echo $_W['siteurl']}" method="post" class="form-horizontal form" id="ff">
+
+    <div class="panel-heading">
+          详情设置
+    <a href="{php echo $this->createWebUrl('sweb_article');}" class="btn btn-primary span3" style="float:right;">添加栏目详情</a>
+
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+      <label for="inputEmail3" class="col-sm-2 control-label">详情标题</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="article_name" id="inputEmail3" placeholder="栏目标题不超过20个字" value="{$articles['article_name']}">
+      </div>
+    </div>
+    <!-- 栏目 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">栏目</label>
+    <div class="col-sm-10">
+      <select class="form-control" name="cate_id" id="status">
+            {if $caten['id']==true}
+              <option value="{$caten['id']}" selected="selected">{$caten['cate_name']}</option>
+            {else}
+            {loop $cates $catez}
+              <option value="{$catez['id']}">{$catez['cate_name']}</option>
+            {/loop}
+            {/if}
+      </select>
+    </div>
+  </div>
+  <!-- 栏目内容 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">栏目内容</label>
+    <div class="col-sm-10">
+      {php echo tpl_ueditor('article_detail',$articles["article_detail"]);}
+
+    </div>
+  </div>
+  <!-- 是否需要支付 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">是否需要支付</label>
+
+    <div class="col-sm-10">
+      <label>
+          <input value="1" name="is_pay" type="radio" {if $articles['is_pay']==1} checked="checked"{/if}> 需要
+        </label>
+       <label>
+          <input value="0" name="is_pay" type="radio" {if $articles['is_pay']==0} checked="checked"{/if}> 不需要
+        </label>
+    </div>
+     <!-- 支付金额 -->
+
+  <div class="form-group" id="fee">
+    <div class="form-group" >
+      <label for="inputPassword3" class="col-sm-2 control-label">支付金额</label>
+      <div class="col-sm-10">
+       <input type="text" class="form-control" name="fee" id="price" placeholder="输入整数金额" value="{$articles['fee']}">
+      </div>
+    </div>
+    <div class="form-group" >
+      <label for="inputPassword3" class="col-sm-2 control-label">购买数量</label>
+      <div class="col-sm-10">
+       <input type="text" class="form-control" name="buy_num" id="buy_num" placeholder="输入购买次数" value="{$articles['buy_num']}"> 不输入则表示不限制购买次数
+      </div>
+    </div>
+    <div class="form-group" >
+      <label for="inputPassword3" class="col-sm-2 control-label">活动时间</label>
+      <div class="col-sm-10">
+        {php echo tpl_form_field_daterange('active', array('start'=>$articles['active_start'],'end'=>$articles['active_end']), true);} <br/>
+        不填写则表示没有时间限制
+      </div>
+    </div>
+
+  </div>
+   <!-- 是否显示 -->
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">是否显示</label>
+
+    <div class="col-sm-10">
+      <label>
+          <input value="1" name="is_show" type="radio" {if $articles['is_show']==1} checked="checked"{/if}> 是
+        </label>
+       <label>
+          <input value="0" name="is_show" type="radio" {if $articles['is_show']==0} checked="checked"{/if}> 否
+        </label>
+    </div>
+  </div> 
+  <div class="form-group">
+      <label class="col-xs-12 col-sm-3 col-md-2 col-lg-2 control-label">背景音乐</label>
+      <div class="col-md-6">
+        {php echo tpl_form_field_audio('back_music',$articles['back_music']);}
+      </div>
+  </div> 
+       <input type="hidden" value="{$articles['id']}" name="id">
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        分享设置
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">分享标题</label>
+            <div class="col-sm-9 col-xs-12">
+                <input type="text" id="share_title" class="form-control" placeholder="标题不超过30个字" name="share_title" value="{$articles['share_title']}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">分享的图片</label>
+            <div class="col-sm-9 col-xs-12">
+                {php echo tpl_form_field_image('share_pic',$articles['share_pic']);}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 col-md-2 control-label">分享描述</label>
+            <div class="col-sm-9 col-xs-12">
+                <textarea style="height:60px;" id='share_desc' name="share_desc" class="form-control" cols="60">{$articles['share_desc']}</textarea>
+            </div>
+        </div>
+
+       <div class="form-group">
+          <label class="col-xs-12 col-sm-3 col-md-2 control-label"></label>
+          <div class="col-sm-9 col-xs-12">
+            <input name="submit" type="submit" value="提交" class="btn btn-primary span3" />
+            <input type="hidden" name="token" value="{$_W['token']}" />
+          </div>
+
+        </div>
+    </div>
+
+</div>
+  </form>
+</div>
+<script type="text/javascript">
+// 打开页面自动加载的
+// 富文本编辑器
+$(function(){
+    ueditor = UE.getEditor('article_detail');
+    // ueditor.setContent(content);
+    
+});
+// 需要支付时的支付金额
+$(function(){
+      $("#fee").hide();
+      var fee="{$articles['fee']}";
+    if(fee){
+      $("#fee").show();
+    }else{
+      $("#fee").hide();
+    }
+       $("input[name='is_pay']").click(function(){
+        var status= $(this).val();
+          if(status==1){
+            $("#fee").show();
+          }else{
+            $("#fee").hide();
+            $("input[name='fee']").val('');
+          }
+       });
+     });
+$(function(){
+  $("input[name='fee']").blur(function(){
+        var pri=$("#price").val();
+        var price=parseFloat(pri);
+        $("input[name='fee']").val(price);
+        if(isNaN(price)){
+          $("input[name='fee']").val('');
+          alert("金额格式不正确");
+          return false;
+        }
+        if(price<=0){
+          alert("金额必须大于0");
+          $("input[name='fee']").val('');
+          $("#price").focus();
+          return false;
+        }
+        if(typeof(price)!="number"){
+          alert('请输入正确的金额格式');
+          $("input[name='fee']").val('');
+          $("#price").focus();
+          return false;
+        }
+       });
+});
+
+</script>
+{template 'common/footer'}
+
+
+

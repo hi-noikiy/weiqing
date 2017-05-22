@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest versionCode="0.52,0.6">
+	<identifie><![CDATA[style]]></identifie>
+	<title><![CDATA[newstyle]]></title>
+	<type><![CDATA[rummery]]></type>
+	<description><![CDATA[这是一个新模板]]></description>
+	<author><![CDATA[wzl]]></author>
+	<url><![CDATA[http://bbs.we7.cc/]]></url>
+	<sections><![CDATA[5]]></sections>
+	<settings>
+		<item variable="style5" content="141" description="fengge5"/>
+	</settings>
+</manifest>

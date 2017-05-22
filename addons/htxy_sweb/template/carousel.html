@@ -1,0 +1,50 @@
+{template 'common/header'}
+
+<a href="{php echo $this->createWebUrl('add_carousel');}" class="btn btn-primary span3">添加轮播</a>
+
+<div class="panel panel-default">
+  <div class="panel-heading">微企内容管理</div>
+
+  <!-- Table -->
+  <table class="table">
+    <th>编号</th>
+    <th>轮播名称</th>
+    <th>添加时间</th>
+    <th>操作</th>
+    	{loop $list $results}
+    <tr>
+        <td class="with-checkbox">
+            <!-- <input type="checkbox" name="ids" id='ids'  value="{$results['id']}"> -->
+        	{$results['id']}
+        </td>
+        <td>{$results['carousel_name']}</td>
+        
+        <td>{$results['create_time']}</td>
+        <td>
+        	<a class="btn btn-default" href="{php echo $this->createWebUrl('Add_carousel',array('id'=>$results['id']))}" title="编辑"><i class="fa fa-edit"></i>&nbsp;</a>
+        	
+        	<a class="btn btn-default" href="{php echo $this->createWebUrl('carousel_delete',array('id'=>$results['id']))}" onclick="return confirm('确定删除?')" title="删除" ><i class="fa fa-remove"></i></a>
+        	{if $results['is_show']==1}
+        	<a class="btn btn-default" href="{php echo $this->createWebUrl('edit_status',array('id'=>$results['id'],'is_show'=>$results['is_show'],'table'=>'carousel','url'=>'sweb_carousel'))}" onclick="return confirm('确定改变显示状态?')" title="显示" ><i class="glyphicon glyphicon-eye-open"></i></a>
+        	{else}
+        	<a class="btn btn-default" href="{php echo $this->createWebUrl('edit_status',array('id'=>$results['id'],'is_show'=>$results['is_show'],'table'=>'carousel','url'=>'Sweb_carousel'))}" onclick="return confirm('确定改变显示状态?')" title="不显示" ><i class="glyphicon glyphicon-eye-close"></i></a>
+        	{/if}
+        </td>
+    </tr>
+
+		{/loop}
+	<!-- <tr>
+		<td>
+			<input type="checkbox" class="check_all" />
+   
+			<input type="button" class="btn btn-primary" name="deleteall" value="删除选择的" /> 
+		</td>
+
+	</tr> -->
+	
+  </table>
+  {$pager}
+
+</div>
+
+{template 'common/footer'}

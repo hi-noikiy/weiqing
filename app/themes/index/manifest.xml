@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest versionCode="0.52,0.6">
+	<identifie><![CDATA[index]]></identifie>
+	<title><![CDATA[index]]></title>
+	<type><![CDATA[often]]></type>
+	<description><![CDATA[模板介绍]]></description>
+	<author><![CDATA[wzl]]></author>
+	<url><![CDATA[http://bbs.we7.cc/]]></url>
+	<sections><![CDATA[5]]></sections>
+	<settings>
+		<item variable="index1" content="index32" description="index12"/>
+	</settings>
+</manifest>

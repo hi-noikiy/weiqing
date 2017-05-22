@@ -1,0 +1,46 @@
+2016-11-30 12:37:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1480480633</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[乐兔3]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-11-30 12:37:13 params :
+------------
+Array:
+message : Array ;
+module : htxy_sweb ;
+rule : 176 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-11-30 12:37:13 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 4 ;
+Articles : Array ;
+
+2016-11-30 12:38:37 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1480480718</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[乐兔3]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-11-30 12:38:37 params :
+------------
+Array:
+message : Array ;
+module : htxy_sweb ;
+rule : 176 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-11-30 12:38:37 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+

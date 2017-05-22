@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest versionCode="0.52,0.6">
+	<identifie><![CDATA[zxcv]]></identifie>
+	<title><![CDATA[asdf]]></title>
+	<type><![CDATA[often]]></type>
+	<description><![CDATA[qwer]]></description>
+	<author><![CDATA[wzl]]></author>
+	<url><![CDATA[http://127.0.0.1/weiqing/index.html]]></url>
+	<sections><![CDATA[2]]></sections>
+	<settings>
+		<item variable="index23" content="212" description="shouye23"/>
+	</settings>
+</manifest>

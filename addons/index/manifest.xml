@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest versionCode="0.52,0.6">
+	<identifie><![CDATA[index]]></identifie>
+	<title><![CDATA[qqqqq]]></title>
+	<type><![CDATA[often]]></type>
+	<description><![CDATA[safs]]></description>
+	<author><![CDATA[aaa]]></author>
+	<url><![CDATA[http://bbs.we7.cc/]]></url>
+	<sections><![CDATA[5]]></sections>
+	<settings>
+		<item variable="qw" content="qq" description="dfd"/>
+	</settings>
+</manifest>

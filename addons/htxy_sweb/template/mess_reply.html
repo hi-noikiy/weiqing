@@ -1,0 +1,105 @@
+{template 'common/header'}
+<div class="panel panel-default">
+  <div class="panel-heading clearfix" style="padding: 10px 15px;">
+      <div class="pull-left">
+          <a href="#"><span class="label label-success">编号</span></a>
+          <b>:{$messages['id']}</b>
+      </div>
+      <div class="pull-right">
+          <!-- <span class="text-muted"></span>&nbsp;&nbsp; -->
+          <!-- <a href="{php echo $this->createWebUrl('mess_detail',array('id'=>$results['id']))}" target="_blank">查看详情</a> -->
+      </div>
+  </div>
+  <div class="panel-body table-responsive" style="padding: 0px;">
+     <div style = "padding: 10px 20px; border-bottom: 1px solid #ddd">
+        <p>
+          <img src="{$messages['headerurl']}" style="border-radius:50%;border:solid #F4D045 2px;width:30px;height:30px;">&nbsp;&nbsp;{$messages['nickname']}
+        </p >
+        <span style = "font-size: 12px; color: #999;">{$messages['create_time']}</span>
+      </div>
+      <div style = "padding: 10px 20px; border-bottom: 1px solid #ddd; overflow: hidden; position: relative; width: auto;">
+        <p>留言内容:<span>{$messages['message_content']}</span></p >
+        <p style="float: left;">我来回答:</p >
+        <textarea id="text" class="form-control" rows="7" style="float: left; width: 80%; margin-left: 10px; clear: right;"></textarea><br>
+        <input type="button" class="btn btn-info" style="position: absolute;bottom: 10px; margin-left: 10px;" value="提交回答" onclick="return submitM();">
+      </div>
+    </div>
+    <div class="list">
+      <!-- <p>全部</p > -->
+      <ul class="ly-list" style="list-style: none;">
+       {if $reply_mess == true}
+        {loop $reply_mess $results}
+
+        <li>
+          <div style = "padding: 10px 20px; border-bottom: 1px solid #ddd">
+           <!--  <p>
+              <img src="http://wx.qlogo.cn/mmopen/luuh1ic2IuD5TNkvjDtT6icEiceHkNF8BhhdtuFLt82tAGEOaKrFRgFe58VbnzyzviazfDaEM5y4qAFcDQlteeW8KjeLprB6uP9q/132" style="border-radius:50%;border:solid #F4D045 2px;width:30px;height:30px;">&nbsp;&nbsp;府撒: ????????????
+            </p > -->
+            <p>我的回复: <span>{$results['reply_message']}</span></p >
+            <span style = "font-size: 12px; color: #999;">{$results['create_time']}</span>
+
+        </div>
+        </li>
+        {/loop}
+        <!-- 用户的回复 -->
+          {if $u_reply ==true}
+            {loop $u_reply $u_reply}
+              <li>
+          <div style = "padding: 10px 20px; border-bottom: 1px solid #ddd">
+           <!--  <p>
+              <img src="http://wx.qlogo.cn/mmopen/luuh1ic2IuD5TNkvjDtT6icEiceHkNF8BhhdtuFLt82tAGEOaKrFRgFe58VbnzyzviazfDaEM5y4qAFcDQlteeW8KjeLprB6uP9q/132" style="border-radius:50%;border:solid #F4D045 2px;width:30px;height:30px;">&nbsp;&nbsp;府撒: ????????????
+            </p > -->
+            <p>{$u_reply['user_reply_niakname']}: <span>{$u_reply['reply_message']}</span></p >
+            <span style = "font-size: 12px; color: #999;">{$u_reply['create_time']}</span>
+
+        </div>
+        </li>
+            {/loop}
+          {/if}
+        {else}
+          <li>还没有回复ta任何信息,ta很着急</li>
+        {/if}
+        
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+    function submitM(){
+      var content=$('#text').val();
+      var  url="{php echo $this->createWebUrl('add_reply');}";
+      var id="{$messages['id']}";
+      var site_id="{$messages['site_id']}";
+      var submitData = {
+          id: id,
+          site_id:site_id,
+          content: content,
+          action:"add_reply"
+        };
+
+     if(content==""){
+        alert('回复内容不能为空');
+        return;
+     }
+     if(id==""){
+        alert('您回复的内容已删除或不存在');
+        return;
+     }
+      $.ajax({
+             type: "POST",
+             url: url,
+             data: submitData,
+             dataType: "json",
+             success: function(data){
+                         if(data.status==1){
+                          setTimeout('window.location.href=location.href',100);
+                            alert(data.info);
+
+                         }else{
+                            alert(data.info);
+                         }
+                      }
+         });
+    }
+  </script>
+{template 'common/footer'}

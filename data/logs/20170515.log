@@ -1,0 +1,400 @@
+2017-05-15 15:01:33 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1494831693</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[活动]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2017-05-15 15:01:33 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'toUser',
+    'fromusername' => 'fromUser',
+    'createtime' => '1494831693',
+    'msgtype' => 'text',
+    'content' => '活动',
+    'msgid' => '1234567890123456',
+    'from' => 'fromUser',
+    'to' => 'toUser',
+    'time' => '1494831693',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'cover',
+  'rule' => '9',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '13',
+    'rid' => '9',
+    'uniacid' => '1',
+    'module' => 'cover',
+    'content' => '活动',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+  ),
+)
+
+2017-05-15 15:01:33 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2017-05-15 15:31:29 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1494833490</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[刚]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2017-05-15 15:31:29 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'toUser',
+    'fromusername' => 'fromUser',
+    'createtime' => '1494833490',
+    'msgtype' => 'text',
+    'content' => '刚',
+    'msgid' => '1234567890123456',
+    'from' => 'fromUser',
+    'to' => 'toUser',
+    'time' => '1494833490',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'news',
+  'rule' => '10',
+  'priority' => '1',
+  'keyword' => 
+  array (
+    'id' => '14',
+    'rid' => '10',
+    'uniacid' => '1',
+    'module' => 'news',
+    'content' => '刚',
+    'type' => '1',
+    'displayorder' => '1',
+    'status' => '1',
+  ),
+)
+
+2017-05-15 15:31:29 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2017-05-15 15:34:09 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1494833649</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[刚]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2017-05-15 15:34:09 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'toUser',
+    'fromusername' => 'fromUser',
+    'createtime' => '1494833649',
+    'msgtype' => 'text',
+    'content' => '刚',
+    'msgid' => '1234567890123456',
+    'from' => 'fromUser',
+    'to' => 'toUser',
+    'time' => '1494833649',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'news',
+  'rule' => '10',
+  'priority' => '1',
+  'keyword' => 
+  array (
+    'id' => '14',
+    'rid' => '10',
+    'uniacid' => '1',
+    'module' => 'news',
+    'content' => '刚',
+    'type' => '1',
+    'displayorder' => '1',
+    'status' => '1',
+  ),
+)
+
+2017-05-15 15:34:09 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2017-05-15 15:34:20 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1494833660</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[刚]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2017-05-15 15:34:20 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'toUser',
+    'fromusername' => 'fromUser',
+    'createtime' => '1494833660',
+    'msgtype' => 'text',
+    'content' => '刚',
+    'msgid' => '1234567890123456',
+    'from' => 'fromUser',
+    'to' => 'toUser',
+    'time' => '1494833660',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'news',
+  'rule' => '10',
+  'priority' => '1',
+  'keyword' => 
+  array (
+    'id' => '14',
+    'rid' => '10',
+    'uniacid' => '1',
+    'module' => 'news',
+    'content' => '刚',
+    'type' => '1',
+    'displayorder' => '1',
+    'status' => '1',
+  ),
+)
+
+2017-05-15 15:34:20 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2017-05-15 15:34:20 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1494833661</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[刚]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2017-05-15 15:34:20 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'toUser',
+    'fromusername' => 'fromUser',
+    'createtime' => '1494833661',
+    'msgtype' => 'text',
+    'content' => '刚',
+    'msgid' => '1234567890123456',
+    'from' => 'fromUser',
+    'to' => 'toUser',
+    'time' => '1494833661',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'news',
+  'rule' => '10',
+  'priority' => '1',
+  'keyword' => 
+  array (
+    'id' => '14',
+    'rid' => '10',
+    'uniacid' => '1',
+    'module' => 'news',
+    'content' => '刚',
+    'type' => '1',
+    'displayorder' => '1',
+    'status' => '1',
+  ),
+)
+
+2017-05-15 15:34:20 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2017-05-15 15:34:21 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1494833661</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[刚]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2017-05-15 15:34:21 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'toUser',
+    'fromusername' => 'fromUser',
+    'createtime' => '1494833661',
+    'msgtype' => 'text',
+    'content' => '刚',
+    'msgid' => '1234567890123456',
+    'from' => 'fromUser',
+    'to' => 'toUser',
+    'time' => '1494833661',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'news',
+  'rule' => '10',
+  'priority' => '1',
+  'keyword' => 
+  array (
+    'id' => '14',
+    'rid' => '10',
+    'uniacid' => '1',
+    'module' => 'news',
+    'content' => '刚',
+    'type' => '1',
+    'displayorder' => '1',
+    'status' => '1',
+  ),
+)
+
+2017-05-15 15:34:21 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2017-05-15 15:34:21 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1494833662</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[刚]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2017-05-15 15:34:21 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'toUser',
+    'fromusername' => 'fromUser',
+    'createtime' => '1494833662',
+    'msgtype' => 'text',
+    'content' => '刚',
+    'msgid' => '1234567890123456',
+    'from' => 'fromUser',
+    'to' => 'toUser',
+    'time' => '1494833662',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'news',
+  'rule' => '10',
+  'priority' => '1',
+  'keyword' => 
+  array (
+    'id' => '14',
+    'rid' => '10',
+    'uniacid' => '1',
+    'module' => 'news',
+    'content' => '刚',
+    'type' => '1',
+    'displayorder' => '1',
+    'status' => '1',
+  ),
+)
+
+2017-05-15 15:34:21 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2017-05-15 15:34:21 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1494833662</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[刚]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2017-05-15 15:34:21 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'toUser',
+    'fromusername' => 'fromUser',
+    'createtime' => '1494833662',
+    'msgtype' => 'text',
+    'content' => '刚',
+    'msgid' => '1234567890123456',
+    'from' => 'fromUser',
+    'to' => 'toUser',
+    'time' => '1494833662',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'news',
+  'rule' => '10',
+  'priority' => '1',
+  'keyword' => 
+  array (
+    'id' => '14',
+    'rid' => '10',
+    'uniacid' => '1',
+    'module' => 'news',
+    'content' => '刚',
+    'type' => '1',
+    'displayorder' => '1',
+    'status' => '1',
+  ),
+)
+
+2017-05-15 15:34:21 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
